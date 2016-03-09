@@ -167,6 +167,8 @@ public class ChooseActivity extends Activity implements View.OnClickListener {
         }
 
         if (MessageService.CURRENT_NETWORK_TYPE == MessageService.CONN_NETWORK_TYPE_WIFI && !wifiserver) {
+            mProgressBarDialog.setMessage(getString(R.string.loading));
+            mProgressBarDialog.show();
             handler.post(pingRunnable);
         } else if (addevice && !wifiName1.equals(mWiFiManagementAPI.getWiFiInfo().getSSID())) {
             Intent intent = new Intent(ChooseActivity.this, ChooseWiFiActivity.class);
@@ -181,13 +183,14 @@ public class ChooseActivity extends Activity implements View.OnClickListener {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            mProgressBarDialog.dismiss();
             switch (msg.what) {
                 case WiFiManagementAPI.PING_IP_SUCCESS:
+                    mProgressBarDialog.dismiss();
                     wifiserver = true;
                     pls_choose_wifi.setVisibility(View.VISIBLE);
                     break;
                 case WiFiManagementAPI.PING_IP_COMPLETE:
+                    mProgressBarDialog.dismiss();
                     pingnum = 0;
                     Toast.makeText(ChooseActivity.this, getString(R.string.check_network_conn), Toast.LENGTH_SHORT).show();
                     break;
@@ -208,7 +211,6 @@ public class ChooseActivity extends Activity implements View.OnClickListener {
     Runnable pingRunnable = new Runnable() {
         @Override
         public void run() {
-            mProgressBarDialog.show();
             Message message = handler.obtainMessage();
             if (mWiFiManagementAPI.ping("github.com")) {
                 pingnum = 0;
