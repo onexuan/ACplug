@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<digimagus.csrmesh.view.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/tutorial"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_marginTopPercent="6%" />
+
+    <TextView
+        android:id="@+id/pls_choose_wifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:text="@string/please_select_plug"
+        android:textColor="@color/red" />
+
+    <digimagus.csrmesh.view.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/cancel"
+            style="@style/Bottom.Button.Style"
+            android:layout_centerHorizontal="false"
+            android:layout_centerVertical="true"
+            android:padding="0dp"
+            android:text="@string/cancel"
+            app:layout_heightPercent="40%h"
+            app:layout_marginLeftPercent="8%"
+            app:layout_textSizePercent="16%h"
+            app:layout_widthPercent="140%h" />
+
+        <TextView
+            android:id="@+id/next"
+            style="@style/Bottom.Button.Style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="0dp"
+            android:text="@string/next"
+            app:layout_heightPercent="40%h"
+            app:layout_marginRightPercent="8%"
+            app:layout_textSizePercent="16%h"
+            app:layout_widthPercent="140%h" />
+    </digimagus.csrmesh.view.PercentRelativeLayout>
+
+</digimagus.csrmesh.view.PercentRelativeLayout>

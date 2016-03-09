@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Size -->
+    <size
+        android:width="12dp"
+        android:height="12dp" />
+    <!-- Width and height -->
+
+    <!-- Fillet-->
+    <corners
+        android:bottomLeftRadius="12dp"
+        android:bottomRightRadius="12dp"
+        android:radius="6dp"
+        android:topLeftRadius="12dp"
+        android:topRightRadius="12dp" />
+    <!-- Set fillet radius -->
+
+    <!--Fill -->
+    <solid android:color="#FFF" />
+    <!-- Fill color -->
+    <!-- stroke -->
+    <stroke
+        android:width="1dp"
+        android:color="@color/gray"/>
+</shape>

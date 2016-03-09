@@ -1,0 +1,294 @@
+<resources>
+    <string name="app_name">ACplug</string>
+    <string name="select_weekday">Select Weekday</string>
+    <string name="usage_history">Usage History</string>
+    <string name="cost_history">Cost History</string>
+    <string name="check_network_conn">Check the network connection</string>
+
+
+
+    <string name="device_schedule_overlap">The following time overlap: %1$s please reselect!</string>
+
+
+    <string name="group">Group</string>
+    <string name="tips">Tips</string>
+    <string name="set_time_fail">Timeout<!--Time setup failed--></string>\
+    <string name="timeout">Timeout<!--Time setup failed--></string>
+    <string name="failed">failed</string>
+    <string name="exit">EXIT</string>
+    <string name="cancel">Cancel</string>
+    <string name="Resume">Resume</string>
+    <string name="open_privacy">Are you sure you turn on privacy ?</string>
+    <string name="close_privacy">Confirm Close Your Privacy?</string>
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+    <string name="device_list">Device List</string>
+    <string name="schedule">Schedule</string>
+
+    <string name="save_schedule_message">Are you sure save the schedule?</string>
+    <string name="remove_schedule">Are you sure remove the schedule from the devcie?</string>
+    <string name="coat_illegal">Cost is illegal,consists of Numbers and cannot begin with \".\" !</string>
+
+    <string name="turn">Turn</string>
+    <string name="on_when">Turn On When</string>
+    <string name="on_weekdays">07:55 weekdays</string>
+    <string name="on_wed">19:20 Tue Wed Fri</string>
+
+    <string name="Off_when">Turn Off When</string>
+    <string name="Off_weekdays">10:55 weekdays</string>
+    <string name="Off_wed">22:20 Tue Wed Fri</string>
+    <string name="export">Export</string>
+    <string name="to_email">To Email</string>
+    <string name="enter_email">Enter your email</string>
+
+    <string name="send">Send</string>
+    <string name="reset">Reset</string>
+    <string name="done">Done</string>
+    <string name="select_all">Select All</string>
+    <string name="Start">Start</string>
+    <string name="Pause">Pause</string>
+    <string name="Continue">Continue</string>
+
+    <string name="unselect_all">UnSelect All</string>
+
+    <string name="next">Next</string>
+    <string name="add_device">Add Device</string>
+
+
+    <string name="scan_complete">WiFi scan is complete</string>
+    <string name="config_wifi">Are you sure you want to configure the WiFi?</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="find_device">Find your device</string>
+    <string name="conn_device">Connected devices</string>
+    <string name="contain_sql_keyword">can’t contain sql keyword:select、from、where、insert、update、delete、drop、exists、sqlite_version、union、database. etc</string>
+
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+
+    <string name="pass_at_least_eight">Please enter a password at least eight!</string>
+    <string name="correct_password">Are you sure you enter the correct password ?</string>
+
+    <string name="restart_wifi">WiFi in restart</string>
+    <string name="add_group">Add Group</string>
+    <string name="edit_group">Edit Group</string>
+    <string name="edit_device">Edit Device</string>
+    <string name="update_group">Update Group Name</string>
+    <string name="update_device">Update Device Name</string>
+
+    <string name="enter_group_name">Enter groupName</string>
+    <string name="enter_device_name">Enter deviceName</string>
+    <string name="add_group_msg">Are you sure you want to add a device group?</string>
+    <string name="save_successfully">Saved Successfully</string>
+    <string name="no_need_pass">no need pass</string>
+    <string name="send_message">send a message</string>
+    <string name="message_send_success">Message Sent Successfully</string>
+    <string name="device_configuration">Restart WiFi</string>
+    <string name="save">Save</string>
+    <string name="addevice">Add Device</string>
+    <string name="lamp">Lamp %1$d</string>
+
+    <string name="delete_group">Are you sure delete this group?</string>
+    <string name="delete_group_tips">Delete Group Tips</string>
+
+    <string name="delete_schedule">Remove schedule</string>
+    <string name="query_schedule">Query schedule</string>
+    <string name="remove_group">remove %1$s</string>
+    <string name="history">%1$s history</string>
+    <string name="power">Now : %1$s W</string>
+    <string name="weekdays">Weekdays</string>
+    <string name="Weekdays">Weekdays</string>
+    <string name="region">location</string>
+    <string name="connect_to_network">Please connect to the network</string>
+    <string name="tip">Tips</string>
+    <string name="deal_message">Deal with last the message</string>
+    <string name="ac_plug"> &#169; 2015 - 2015 ac plug</string>
+    <string name="title_activity_summary">SummaryActivity</string>
+    <string name="save_schedule_10">Maximum 10 schedules are allowed.</string>
+
+    <string name="device_not_online">The device is offline</string>
+    <string name="exit_app">And then press an exit app...</string>
+    <string name="update_device_status">Updating device status</string>
+    <string name="struggling_loading">Struggling Loading</string>
+    <string name="loading">loading...</string>
+    <string name="positioning">positioning ...</string>
+    <string name="refresh">Refresh</string>
+    <string name="add">+</string>
+    <string name="enter_wifi_pass">Enter Your WiFi Password</string>
+    <string name="start_time">start time: %1$s</string>
+    <string name="end_time">end time: %1$s</string>
+    <string name="start_week">start week : %1$s</string>
+
+    <string name="timeleft">%1$shours %2$smins</string>
+    <string name="end_week">end week : %1$s</string>
+
+    <string name="group_no_device">There is no devices in the group,please add device into the group!</string>
+
+    <string name="email_formt">0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.@_</string>
+    <string name="cost_formt">0123456789.</string>
+    <string name="cost_c_formt">0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz </string>
+    <string name="name_formt">0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz _-</string>
+
+    <!--Device Setting Page-->
+    <string name="device_setting">Device Setting</string>
+    <string name="Lamp">Lamp</string>
+    <string name="Name">Name:</string>
+    <string name="Type">Type:</string>
+    <string name="Status">Status:</string>
+    <string name="Firmware_Ver">Firmware Ver:</string>
+    <string name="serial_number">Serial:</string>
+    <string name="Schedule">Schedule:</string>
+    <string name="Timer">Timer :</string>
+    <string name="Notification">Notification</string>
+    <string name="cost">Cost:</string>
+    <string name="power_s">$ %1$s kWh</string>
+    <string name="Reset_Option">Reset Option</string>
+    <string name="Export">Export:</string>
+    <string name="repeat">Repeat</string>
+
+    <!--Reset Page-->
+    <string name="reset_device_tip">If you reset device, phone and the device will not be able to communicate!  Do you confirm to proceed ?</string>
+    <string name="reset_device">Reset device</string>
+    <string name="reset_device_failed">Reset device failed</string>
+    <string name="reset_device_succeed">Reset device succeed</string>
+
+    <!--Hide Activity Page-->
+    <string name="hide_title">Discover &#38; History Devices</string>
+
+
+    <string name="schedule_time">%1$s<Data><![CDATA[<span><small><small>]]></Data>%2$s<Data><![CDATA[</small></small></span>]]></Data> %5$s %3$s<Data><![CDATA[<span><small><small>]]></Data>%4$s<Data><![CDATA[</small></small></span>]]></Data></string>
+
+    <string name="remaining">%1$s<Data><![CDATA[<span><small><small><small>hours</small></small></small>]]></Data>%2$s<Data><![CDATA[<span><small><small><small>mins</small></small></small>]]></Data></string>
+
+    <string name="set_privacy">Privacy Settings...</string>
+    <string name="discover_privacy">Geting privacy...</string>
+    <string name="timing_plan_settings">Timing Plan Settings</string>
+    <string name="start_end_same">Start and end times are the same,please reselect!</string>
+
+    <string name="set_timer">Set timer</string>
+    <string name="set_timer_plan">Set schedule</string>
+
+    <string name="timing_plan_failed">Timing plan setup failed</string>
+
+    <string name="query_timing_plan">Query timing plan</string>
+    <string name="remove_device_tips">Remove Device Tips</string>
+
+    <string name="remove_device_msg">Are you sure remove the device ?</string>
+
+    <string name="remove_device">Remove Device</string>
+
+    <string name="enter_current_location">Please enter your current location</string>
+    <string name="not_empty">Can not be empty</string>
+
+    <string name="save_tips">Saving Tips</string>
+    <string name="update_device_group">Are you sure add selected devices into the group?</string>
+    <string name="request_last_processed">The last request is being processed</string>
+    <string name="add_device_group">Please add the device to the group</string>
+    <string name="group_offonline">Some of device offline in the group</string>
+
+    <string name="network_tips">Networking Tips</string>
+    <string name="not_access_internet">The current can not access the Internet</string>
+
+    <string name="detecting_network">Detecting network connectivity</string>
+
+    <string name="refresh_tips">Refresh Tips</string>
+    <string name="refresh_message">No Device</string>
+    <string name="enter_device_message">You enter DeviceName illegal!  DeviceName is composed of letters、Numbers、 _、- , length is 2 to 18.</string>
+    <string name="enter_group_message">You enter GroupName illegal!  GroupName is composed of letters、Numbers、 _、- , length is 2 to 18.</string>
+    <string name="groupname_already_exists">Group name already exists.</string>
+
+    <string name="enter_location_message">Location is illegal and include at least two characters!</string>
+    <string name="update_current_position">Are you sure update current position?</string>
+    <string name="remove_tips">Remove Tips</string>
+    <string name="remove_device_group">Are you sure remove the device from the group?</string>
+
+    <string name="quit">Are you sure you want to quit?</string>
+    <string name="quit_tips">Quit Tips</string>
+    <string name="save_group">Are you sure save the group?</string>
+    <string name="update_group_name">Are you sure update the groupName?</string>
+    <string name="update_device_name">Are you sure update the deviceName?</string>
+    <string name="update_schedule">Update schedule</string>
+
+    <string name="please_select_plug">Please select Smart Plug name "outlet-xxxx"</string>
+    <string name="tutorial">This is a tutorial page</string>
+    <string name="email_illegal">Email is illegal!</string>
+    <string name="export_data_msg">Are you sure the data imported into the email?</string>
+
+    <string name="export_device">The value of cost is 0,you need to set the cost. Are you need to set cost now?</string>
+
+    <string name="cost_save">Are you sure  want to save the region and cost?</string>
+    <string name="enter_mail_account">Eamil is empty,please enter your email.</string>
+
+
+    <string name="conn_device_fail">Device configuration failed</string>
+    <string name="battery_chart">Battery use chart %1$s</string>
+
+    <!--ChooseWiFiActivity Page-->
+    <string name="select_wifi">Select Your WiFi</string>
+    <string name="scanning_device">Scanning Device...</string>
+    <string name="turn_on_wifi">Please turn on WiFi phone</string>
+    <string name="conn_device_wifi">Please connect to device AP</string>
+    <string name="confirm_config_device">Your phone is now connecting to the WiFi named as %1$s. Please confirm %1$s is the AP name of your device.</string>
+    <string name="not_find_device">Not find AC Plug. Please confirm %1$s is the AP name of your device.</string>
+    <string name="confirm_config">WiFi name of the current phone is connected to %1$s, confirm that this device?</string>
+    <string name="no_find_device">Did not find the device, you confirm %1$s your device is AP,WIFI need to reset it?</string>
+
+    <!--RegionActivity Page-->
+    <string name="mobile_positioning">Mobile Positioning</string>
+    <string name="Device_Name">Device Name：</string>
+    <string name="device_name">Device name</string>
+    <string name="Region">Region：</string>
+    <string name="save_data">Are you sure save device ?</string>
+    <string name="saving_data">Saving device</string>
+
+
+    <!--GroupScheduleActivity Page-->
+    <string name="GroupSchedule">GroupSchedule</string>
+
+    <!--AddGroupSchedule Page-->
+    <string name="add_group_schedule">Add GroupSchedule</string>
+
+
+    <string name="Turn_On_When">Turn On When</string>
+    <string name="Turn_Off_When">Turn Off When</string>
+
+
+    <string name="other">Other</string>
+    <string name="other_network">Other Network</string>
+    <string name="timer">Timer</string>
+    <string name="When_Timer_Ends">When Timer Ends</string>
+
+    <string name="Usage">Usage</string>
+    <string name="Cost">Cost</string>
+    <string name="Monthly_over">Monthly over</string>
+    <string name="title_activity_test">TestActivity</string>
+
+    <string name="choose_time">%1$s:%2$s %3$s</string>
+
+    <!--More Fragment-->
+
+    <string name="more">More</string>
+    <string name="add_new_device">Add New Device:</string>
+    <string name="add_hide_device">Add Hide Device:</string>
+    <string name="Report_a_problem">Report a problem :</string>
+    <string name="Rate_this_App">Rate this App</string>
+    <string name="Location">Location:</string>
+    <string name="Privacy">Privacy:</string>
+    <string name="privacy">Privacy</string>
+    <string name="App_Ver">App Ver:</string>
+    <string name="Setup_Guide">Setup Guide:</string>
+    <string name="terms_conditions_point">Terms &#38; Conditions :</string>
+    <string name="terms_conditions">Terms &#38; Conditions</string>
+
+    <string name="On">On</string>
+    <string name="Off">Off</string>
+
+    <string name="enter_network_name">pls enter network name</string>
+    <string name="report_email">no email</string>
+    <string name="setings">Setings</string>
+
+    <string name="No_network_connection">No network connection</string>
+    <string name="not_connected_to_the_server">Current WiFi is unavailable, please make sure it has connected to your work/home WiFi.</string>
+    <string name="not_connected_to_the_wifi">please set your wifi.</string>
+    <string name="Tutorial">Tutorial</string>
+    <string name="no_wifi_pls_conn">No Wifi network Pls. connect your home/wifi network</string>
+</resources>

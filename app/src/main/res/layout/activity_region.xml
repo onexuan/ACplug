@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:background="@drawable/shape_bottom">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/addevice"
+            android:textSize="24sp" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:paddingRight="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Device_Name"
+            android:textSize="24sp" />
+
+        <digimagus.csrmesh.view.EditTextWithDel
+            android:id="@+id/device_name"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:digits="@string/name_formt"
+            android:hint="@string/device_name"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_bg" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:paddingRight="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Region"
+            android:textSize="24sp" />
+        <digimagus.csrmesh.view.EditTextWithDel
+            android:id="@+id/location"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:hint="@string/region"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edit_bg" />
+        <TextView
+            android:id="@+id/location_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text=""
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/save"
+            style="@style/Bottom.Button.Style"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="@string/save" />
+    </LinearLayout>
+
+
+</LinearLayout>

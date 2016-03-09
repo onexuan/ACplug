@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '19.1.0'
+    defaultConfig {
+        applicationId "digimagus.csrmesh.acplug"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 11
+        versionName "0.7.7"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+dependencies {
+    compile project(':aclibrary')
+    compile files('libs/achartengine-1.1.0.jar')
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.amazonaws:aws-android-sdk-sns:2.+'
+    compile 'com.google.android.gms:play-services-gcm:8.3.0'/*GCM*/
+}

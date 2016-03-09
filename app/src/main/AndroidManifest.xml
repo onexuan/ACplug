@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="digimagus.csrmesh.acplug">
+
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAG" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!--弹出对话框-->
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="true" />
+
+    <!-- android:launchMode="singleTask" -->
+    <!--#禁止屏幕横竖切换，portrait为纵向，landscape为横向-->
+
+    <!--<uses-permission android:name="android.permission.RUN_INSTRUMENTATION" />-->
+
+    <permission android:name="com.amazonaws.kindletest.permission.RECEIVE_ADM_MESSAGE"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="com.amazonaws.kindletest.permission.RECEIVE_ADM_MESSAGE"/>
+    <uses-permission android:name="com.amazon.device.messaging.permission.RECEIVE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <instrumentation
+        android:name="android.test.InstrumentationTestRunner"
+        android:targetPackage="digimagus.csrmesh.acplug" />
+
+    <application
+        android:name=".AcApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/icon_plug"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+
+        <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name=".WelcomeActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TutorialActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ConnWiFIActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChooseWiFiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DeviceSettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SummaryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EditNameActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ScheduleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CostActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ExportActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ResetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DeviceScheduleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GroupSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GroupDeviceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TermsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ChooseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HideDeviceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".GroupScheduleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddGroupScheduleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".OtherNetworkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TimerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NotificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PrivacyActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.digimagus.aclibrary.MessageService">
+            <intent-filter>
+                <action android:name="snail.digimagus.csrmesh.acplug" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <!--
+                <service
+                    android:name="com.amazonaws.mobileconnectors.s3.transferutility.TransferService"
+                    android:enabled="true" />
+
+                <activity android:name=".TestActivity">
+                    <intent-filter>
+                        <action android:name="android.intent.action.MAIN" />
+                        <category android:name="android.intent.category.LAUNCHER" />
+                    </intent-filter>
+                </activity>-->
+
+    </application>
+
+</manifest>

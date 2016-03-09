@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp">
+    <ImageView
+        android:id="@+id/device_icon"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_weight="2.3"
+        android:paddingTop="5dp"
+        android:src="@mipmap/icon_plug" />
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="7">
+        <TextView
+            android:id="@+id/device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="27dp"
+            android:text="@string/Lamp"
+            android:textSize="18sp" />
+        <TextView
+            android:id="@+id/power"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="27dp"
+            android:text="@string/power"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/right"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="2.8">
+        <ProgressBar
+            android:id="@+id/send_msg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:indeterminateDrawable="@anim/loading_msg"
+            android:padding="10dp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/device_state"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:padding="6dp"
+            android:src="@mipmap/icon_plugoffline" />
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/yellow" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/hide"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/abc_action_bar_default_height_material"
+        android:background="@drawable/shape_bottom">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:text="@string/hide_title"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/hide_devices"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4.5"
+        android:background="#FFF" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/shape_top">
+
+        <TextView
+            android:id="@+id/select_all"
+            style="@style/Bottom.Button.Style"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="false"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:padding="0dp"
+            android:text="@string/select_all" />
+
+        <TextView
+            android:id="@+id/done"
+            style="@style/Bottom.Button.Style"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:padding="0dp"
+            android:text="@string/done" />
+    </RelativeLayout>
+
+</LinearLayout>

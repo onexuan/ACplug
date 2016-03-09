@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<digimagus.csrmesh.view.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_heightPercent="40%h">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#E0E0E0">
+
+            <TextView
+                android:id="@+id/done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="12dp"
+                android:text="@string/done"
+                android:textColor="@drawable/change_color" />
+        </RelativeLayout>
+
+        <digimagus.csrmesh.view.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <View
+                android:id="@+id/top"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_marginTopPercent="37%h" />
+
+            <View
+                android:id="@+id/bottom"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                app:layout_marginTopPercent="62%h" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <NumberPicker
+                    android:id="@+id/value1"
+                    android:clickable="false"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3" />
+
+                <NumberPicker
+                    android:id="@+id/hour"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="false" />
+
+                <NumberPicker
+                    android:id="@+id/minute"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="false" />
+
+                <NumberPicker
+                    android:id="@+id/am_pm"
+                    android:layout_width="0dp"
+                    android:clickable="false"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <NumberPicker
+                    android:id="@+id/value2"
+                    android:layout_width="0dp"
+                    android:clickable="false"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2" />
+            </LinearLayout>
+
+
+        </digimagus.csrmesh.view.PercentRelativeLayout>
+
+
+    </LinearLayout>
+</digimagus.csrmesh.view.PercentRelativeLayout>

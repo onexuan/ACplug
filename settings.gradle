@@ -1,0 +1,3 @@
+include ':app'
+include ':aclibrary'
+include ':aclibrarySource'
