@@ -83,7 +83,6 @@ public class SummaryActivity extends BaseActivity implements View.OnClickListene
 
     @Override
     protected void handler(Message msg) {
-        //Log.e(TAG, "udp: " + msg.obj);
         if (msg.what == NOTYFY_UI_CHANGE) {
             String serial = String.valueOf(msg.obj);
             if (bundle.getString("serial").equals(serial)) {
@@ -225,7 +224,6 @@ public class SummaryActivity extends BaseActivity implements View.OnClickListene
                             Calendar lastcalendar = null;
                             for (int i = 0; i < arr.length(); i++) {
                                 JSONObject obj = arr.getJSONObject(i);
-                                Log.e(TAG, "JSONObject   " + obj);
                                 Calendar calendar = Calendar.getInstance();
                                 String timestamp = String.valueOf(obj.getString("timestamp")).replace('T', ' ');
                                 timestamp = timestamp.substring(0, timestamp.indexOf("."));
@@ -237,14 +235,14 @@ public class SummaryActivity extends BaseActivity implements View.OnClickListene
                                     theData = theData < 0 ? 0 : theData;
                                     ChartBattery battery = new ChartBattery();
                                     StringBuilder sb = new StringBuilder(dynamicFormatTime("HH:mm", calendar));
-                                    battery.key = sb.replace(4,5,"0").toString();
+                                    battery.key = sb.replace(4, 5, "0").toString();
                                     battery.setCost(theData * deviceInfo.getPrice());
                                     battery.setUsage(theData);
                                     Chart_HR.put(battery.key, battery);
 
                                     lastcalendar = calendar;
                                     LastData = theData;
-                                    Log.e(TAG, "REQUEST_HR  " + battery.key);
+                                    //Log.e(TAG, "REQUEST_HR  " + battery.key);
                                 } else {
                                     LastData = Double.parseDouble(obj.getString("EnergyP"));
                                     lastcalendar = calendar;
@@ -274,6 +272,7 @@ public class SummaryActivity extends BaseActivity implements View.OnClickListene
                                 String timestamp = String.valueOf(obj.getString("timestamp")).replace('T', ' ');
                                 timestamp = timestamp.substring(0, timestamp.indexOf("."));
                                 calendar.setTime(format.parse(timestamp));
+                                calendar.set(Calendar.HOUR_OF_DAY, calendar.get(Calendar.HOUR_OF_DAY) + timeZone());//标准时间
 
                                 if (lastcalendar != null) {
                                     double theData = Double.parseDouble(obj.getString("EnergyP")) - LastData;
@@ -307,6 +306,7 @@ public class SummaryActivity extends BaseActivity implements View.OnClickListene
                                 JSONObject obj = arr.getJSONObject(i);
                                 if (i != 0) {
                                     String key = bzTime(obj.getString("timestamp")).substring(8, 10);
+                                    Log.e(TAG, "key   " + key);
                                     double usage = Double.parseDouble(obj.getString("EnergyP")) - Double.parseDouble(arr.getJSONObject(i - 1).getString("EnergyP"));
                                     usage = usage < 0 ? 0 : usage;
                                     Chart_WK.get(key).setUsage(usage);
@@ -594,11 +594,11 @@ public class SummaryActivity extends BaseActivity implements View.OnClickListene
                     for (int i = 0; i < XLabel.length - 1; i++) {
                         int hour = calendar.get(Calendar.HOUR_OF_DAY);
                         if (i < 6) {
-                            XLabel[i] = decimalFormat.format(hour-1) + ":" + i + "0";
+                            XLabel[i] = decimalFormat.format(hour - 1) + ":" + i + "0";
                         } else {
                             XLabel[i] = decimalFormat.format(hour) + ":00";
                         }
-                        Log.e(TAG, "XLabel[i]  " + XLabel[i]);
+                        //Log.e(TAG, "XLabel[i]  " + XLabel[i]);
                     }
                     calendar.set(Calendar.HOUR_OF_DAY, calendar.get(Calendar.HOUR_OF_DAY) - timeZone());//标准时间
                     calendar.set(Calendar.MINUTE, 0);
@@ -637,7 +637,7 @@ public class SummaryActivity extends BaseActivity implements View.OnClickListene
                         XLabel[i] = String.valueOf(i);
                     }
                     calendar.setTime(new Date());//设置时间为当前时间
-                    calendar.set(Calendar.HOUR_OF_DAY, 0);
+                    calendar.set(Calendar.HOUR_OF_DAY, calendar.get(Calendar.HOUR_OF_DAY) - timeZone());//标准时间
                     calendar.set(Calendar.MINUTE, 0);
                     calendar.set(Calendar.SECOND, 0);
                     t_begin = iso8601_format.format(calendar.getTime());
@@ -681,7 +681,7 @@ public class SummaryActivity extends BaseActivity implements View.OnClickListene
 
                     XLabel = new String[7];
                     for (int i = 0; i < 7; i++) {
-                        XLabel[i] = String.valueOf(String.valueOf(calendar.get(Calendar.DAY_OF_MONTH)));
+                        XLabel[i] = String.valueOf(String.valueOf(calendar.get(Calendar.DAY_OF_MONTH) >= 10 ? calendar.get(Calendar.DAY_OF_MONTH) : ("0" + calendar.get(Calendar.DAY_OF_MONTH))));
                         calendar.set(Calendar.DAY_OF_MONTH, calendar.get(Calendar.DAY_OF_MONTH) + 1);
                     }
                     sample = XLabel.length;

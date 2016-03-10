@@ -3,7 +3,6 @@ package digimagus.csrmesh.acplug.util;
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.util.Log;
 
 import org.achartengine.ChartFactory;
 import org.achartengine.GraphicalView;
@@ -15,8 +14,6 @@ import org.achartengine.renderer.XYSeriesRenderer;
 
 import java.util.Collections;
 import java.util.List;
-
-import digimagus.csrmesh.acplug.R;
 
 /**
  *
@@ -55,25 +52,29 @@ public class SummaryChart {
         renderer.setShowGrid(true);
         renderer.setShowLegend(false);
         renderer.setPanEnabled(true, false);
-        renderer.setPanLimits(new double[]{0, x.size(), 0, yMax});
         renderer.setApplyBackgroundColor(true);//必须设置为true，颜色值才生效
         renderer.setBackgroundColor(Color.WHITE);//设置表格背景色
         renderer.setMarginsColor(Color.WHITE);//设置周边背景色
         renderer.setZoomEnabled(false, false);
+        renderer.setClickEnabled(true);//设置是否可以滑动及放大缩小;
         renderer.setXLabelsAngle(-25); // 设置 X 轴标签倾斜角度 (clockwise degree)
         renderer.setXLabels(0); // 设置 X 轴不显示数字（改用我们手动添加的文字标签）
         renderer.setYLabels(5);
         for (int i = 0; i < x.size(); i++) {
-            if (x.size() >= 180 && i % 10 == 0) {
+            if (x.size() >= 178 && i % 12 == 0) {
                 renderer.addXTextLabel(i, x.get(i));
-            } else if (x.size() <= 180 && x.size() >= 90 && i % 5 == 0) {
+            } else if (x.size() <= 178 && x.size() >= 88 && i % 6 == 0) {
                 renderer.addXTextLabel(i, x.get(i));
-            } else if (x.size() <= 90 && x.size() >= 30 && i % 2 == 0) {
+            } else if (x.size() <= 88 && x.size() >= 28 && i % 3 == 0) {
                 renderer.addXTextLabel(i, x.get(i));
-            } else if (x.size() <= 30) {
+            } else if (x.size() < 28) {
                 renderer.addXTextLabel(i, x.get(i));
             }
         }
+
+        renderer.setRange(new double[]{0d, 5d, 0d, 100d}); //设置chart的视图范围
+        renderer.setPanLimits(new double[]{0, x.size(), 0, yMax});
+        renderer.setXLabelsPadding(20f);//设置标签的间距
         setChartSettings(x.size(), yMin, yMax, Color.GRAY);
     }
 
