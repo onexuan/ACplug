@@ -4,10 +4,21 @@ import android.app.Application;
 import android.test.ApplicationTestCase;
 import android.util.Log;
 
+import com.squareup.okhttp.Call;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.Response;
+
+import java.io.IOException;
+import java.net.CookieManager;
+import java.net.CookiePolicy;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.TimeZone;
+import java.util.concurrent.TimeUnit;
+
+import digimagus.csrmesh.test.OkHttpUtil;
 
 public class ApplicationTest extends ApplicationTestCase<Application> {
     public static String TAG = "ApplicationTest";
@@ -68,4 +79,36 @@ public class ApplicationTest extends ApplicationTestCase<Application> {
         builder.append(string);
     }
 
+
+
+    //同步的GET请求
+    public void testGetResponse() throws IOException {
+
+        String url="http://publicobject.com/helloworld.txt";
+
+
+        OkHttpClient mOkHttpClient=new OkHttpClient();
+        mOkHttpClient.setCookieHandler(new CookieManager(null, CookiePolicy.ACCEPT_ORIGINAL_SERVER));
+        mOkHttpClient.setConnectTimeout(30, TimeUnit.SECONDS);
+        Request request = new Request.Builder().url(url).build();
+
+        Call call = mOkHttpClient.newCall(request);
+        Response execute = call.execute();
+
+        System.out.println(execute.body().string());
+    }
+
+
+
+    public void testAppGet(){
+        OkHttpUtil okHttpUtil=new OkHttpUtil();
+        try {
+            Log.e(TAG,"testAppGet:  ");
+            String data=okHttpUtil.get("http://baidu.com");
+            Log.e(TAG,"data:  "+data);
+        } catch (IOException e) {
+            Log.e(TAG,"data:  "+e.getMessage());
+            e.printStackTrace();
+        }
+    }
 }
