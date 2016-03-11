@@ -1,19 +1,11 @@
 package digimagus.csrmesh;
 
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
-import android.content.Intent;
-
-import digimagus.csrmesh.acplug.NotificationActivity;
-
 /**
  * Notification
  */
 public class MessageNotificationManager {
 
-    public NotificationManager manager = null;
+   /* public NotificationManager manager = null;
     private static final int NOTIFICATION_FLAG = 1;
 
     private static class LazyHolder {
@@ -36,5 +28,5 @@ public class MessageNotificationManager {
                 .setNumber(1).build();
         notify2.flags |= Notification.FLAG_AUTO_CANCEL;
         manager.notify(NOTIFICATION_FLAG, notify2);
-    }
+    }*/
 }
